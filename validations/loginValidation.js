@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
 const loginValidation = (body) => {
-    console.log("body is",body)
+   
     const Schema = Joi.object({
         email: Joi.string().email().required(),
         password: Joi.string().regex(new RegExp("[a-zA-Z0-9]{3,15}")).required(),
